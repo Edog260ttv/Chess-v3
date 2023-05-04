@@ -59,4 +59,14 @@ public class Game {
 
     }
 
+    public static void emptyScreen() {
+
+        for (int i = 0; i < 50; i++) {
+
+            System.out.println("");
+
+        }
+
+    }
+
 }
