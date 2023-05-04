@@ -4,12 +4,15 @@ public class Game {
 
     private boolean isGameOver = false;
     private String[] names = new String[2];
+    private Piece[][] board = new Piece[8][8];
 
     public Game() {
 
         names[0] = null;
         names[1] = null;
         isGameOver = false;
+        board = board;
+        
 
     }
 
@@ -17,6 +20,7 @@ public class Game {
 
         names = playerNames;
         isGameOver = false;
+        board = board;
 
     }
 
@@ -67,6 +71,34 @@ public class Game {
 
         }
 
+    }
+    
+    public void setBoard(Piece[][] b) {
+        
+        board = b;
+        
+    }
+    
+    public boolean setBoardTile(int x, int y, Piece p) {
+        
+        if (x < 9 && y < 9) {
+            
+            board[x][y] = p;
+            
+            return true;
+        } else {
+            
+            return false;
+            
+        }
+        
+    }
+    
+    
+    public Piece[][] getBoard() {
+        
+        return board;
+        
     }
 
 }
