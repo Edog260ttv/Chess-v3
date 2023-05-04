@@ -83,6 +83,10 @@ public class Main {
                     }
                 }
                 
+            } else if (userInput.equalsIgnoreCase("quit") || userInput.equalsIgnoreCase("game over")) {
+
+                game.setGameOver(true);
+
             }
 
         }
