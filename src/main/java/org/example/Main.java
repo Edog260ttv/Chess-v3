@@ -51,5 +51,21 @@ public class Main {
 
         }
 
+
+        //Main game loop
+        while (game.isGameOver()) {
+
+            // getting user input
+            String userInput = "";
+            userInput = scan.nextLine();
+
+            if (userInput.equalsIgnoreCase("rules")) {
+
+                Print.printRules();
+                
+            }
+
+        }
+
     }
 }
