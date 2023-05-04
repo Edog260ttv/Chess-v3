@@ -5,6 +5,8 @@ public class Game {
     private boolean isGameOver = false;
     private String[] names = new String[2];
     private Piece[][] board = new Piece[8][8];
+    private int whosTurn = 1;
+    private int turnCount = 1;
 
     public Game() {
 
@@ -12,7 +14,9 @@ public class Game {
         names[1] = null;
         isGameOver = false;
         board = board;
-        
+        turnCount = turnCount;
+        whosTurn = whosTurn;
+
 
     }
 
@@ -21,6 +25,8 @@ public class Game {
         names = playerNames;
         isGameOver = false;
         board = board;
+        turnCount = turnCount;
+        whosTurn = whosTurn;
 
     }
 
@@ -72,33 +78,33 @@ public class Game {
         }
 
     }
-    
+
     public void setBoard(Piece[][] b) {
-        
+
         board = b;
-        
+
     }
-    
+
     public boolean setBoardTile(int x, int y, Piece p) {
         
         if (x < 9 && y < 9) {
-            
+
             board[x][y] = p;
-            
+
             return true;
         } else {
-            
+
             return false;
-            
+
         }
-        
+
     }
-    
-    
+
+
     public Piece[][] getBoard() {
-        
+
         return board;
-        
+
     }
 
 }
